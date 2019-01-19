@@ -18,11 +18,14 @@ public class HashTreeCompare {
     
     
     public static void main(String[] args) {
+        
+        
         //Hashmap
           HashMap<Integer,String> hm=new HashMap<>();
     
           hm.put(100000,"shashila");
           hm.put(30000000, "heshan");
+           hm.put(1000,"priya");
           
           System.out.println("Printing Hashmap Integer,String");
           for(Map.Entry m:hm.entrySet()){
@@ -44,14 +47,13 @@ public class HashTreeCompare {
           TreeMap<Integer,String> hm2=new TreeMap<>();
         hm2.put(100,"Shashila");
         hm2.put(10200000,"heshan");
+         hm2.put(1000,"priya");
        
         
         System.out.println("Printing TreeMap Integer,String");
-        for(Map.Entry m2:hm2.entrySet()){
-        
-        
+        hm2.entrySet().forEach((m2) -> {
             System.out.println(m2.getKey()+" "+m2.getValue());
-        }
+        });
         
         System.out.println("Printing TreeMap String,String");
          TreeMap<String,String> hm4=new TreeMap<>();
