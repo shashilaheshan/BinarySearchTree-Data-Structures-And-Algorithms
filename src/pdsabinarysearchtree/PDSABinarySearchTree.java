@@ -32,7 +32,7 @@ public class PDSABinarySearchTree {
         
        PDSABinarySearchTree tre=new PDSABinarySearchTree();
        //create root
-       
+       //Intializing tree with values
        tre.root=new Node(1);
        tre.root.left=new Node(2);
        tre.root.right=new Node(3);
