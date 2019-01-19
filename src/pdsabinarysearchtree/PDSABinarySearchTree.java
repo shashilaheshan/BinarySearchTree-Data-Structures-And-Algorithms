@@ -41,14 +41,14 @@ public class PDSABinarySearchTree {
        
        tre.root.left.left=new Node(4);
        
-       tre.root.traverlSnOrder();
+       tre.root.traversePostOrder();
     }
     
 }
 class Node{
 
-int key;
-Node left,right;
+      int key;
+      Node left,right;
         public Node(int item){
 
             key=item;
@@ -69,5 +69,25 @@ Node left,right;
             }
         
         }
+        
+        public void traversePreOrder() {
+        System.out.print(this.key + ":");
+        if (this.left != null) {
+           this.left.traverlSnOrder();
+        }
+        if (this.right != null) {
+             this.right.traverlSnOrder();
+        }
+    }
+        
+        public void traversePostOrder() {
+                if (this.left != null) {
+                    this.left.traverlSnOrder();
+                }
+            if (this.right != null) {
+               this.right.traverlSnOrder();
+            }
+            System.out.print(this.key + ":");
+     }
 }
 
